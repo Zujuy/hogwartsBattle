@@ -2,6 +2,8 @@ const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
 let frames = 0
 let interval
+let lastFireTime = 0;
+let fireRate = 5;
 
 
 function clearCanvas() {
@@ -18,6 +20,14 @@ function clearCanvas() {
       }
     }
   
+  }
+  
+  function drawSpells() {
+    spellsRight.forEach((spell,i) => {
+      spell.x ++;
+      if(spell.x >= canvas.width) return spellsRight.splice(i,1)
+      spell.draw()
+    });
   }
 
   function gameOver() {
@@ -41,21 +51,18 @@ function clearCanvas() {
     player1.y += player1.vy
     player2.x += player2.vx
     player2.y += player2.vy
+    drawSpells()
+    // spell1.draw()
+    // spell2.draw()
+    // generateSpells()
     // checkColitions()
     // generateIce()
     // drawObstacles()
     gameOver()
   }
 
+  interval = setInterval(update, 1000 / 60)
 
 
-   interval = setInterval(update, 1000 / 60)
-
-  //  const sound = new Audio();
-  //  const button = document.querySelector('button');
-  //  button.addEventListener('click', playSound);
-  //  function playSound(){
-  //     sound.src = 'audio/harry_music.mp3';
-  //     sound.play();
-  //  }
+  // ===generate spells====/
 

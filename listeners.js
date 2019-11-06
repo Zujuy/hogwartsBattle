@@ -16,9 +16,11 @@ document.onkeydown =  e => {
             return  
         case 69:
             player1.attackDer()
+            spellsRight.push(new Spell(player1.x, player1.y))
             return
         case 81:
             player1.attackIzq()
+            spell1.spellLeft()
             return
        
 
@@ -39,9 +41,11 @@ document.onkeydown =  e => {
             return  
         case 77:
             player2.attackDer()
+            spellsRight.push(new Spell(player2.x, player2.y))
             return
         case 78:
             player2.attackIzq()
+            spell2.spellRight()
             return
     
         

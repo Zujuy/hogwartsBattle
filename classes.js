@@ -62,6 +62,16 @@ class Board {
               )
       }
 
+      isTouching(obstacle) {
+        // algo está tratando de ocupar el mismo espacio en canvas que el personaje
+        return (
+          this.x < obstacle.x + obstacle.width &&
+          this.x + this.width > obstacle.x &&
+          this.y < obstacle.y + obstacle.height &&
+          this.y + this.height > obstacle.y
+        )
+      }
+
       moveRight(){
           this.x -= 10
           this.position = 1
@@ -140,6 +150,16 @@ class Player2 {
             )
     }
 
+    isTouching(obstacle) {
+        // algo está tratando de ocupar el mismo espacio en canvas que el personaje
+        return (
+          this.x < obstacle.x + obstacle.width &&
+          this.x + this.width > obstacle.x &&
+          this.y < obstacle.y + obstacle.height &&
+          this.y + this.height > obstacle.y
+        )
+      }
+
     moveRight(){
         this.x -= 10
         this.position = 1
@@ -173,3 +193,19 @@ class Player2 {
     }
    }
 
+
+// ====== spells============//
+
+  class Spell {
+      constructor(x,y) {
+          this.x = x+100
+          this.y = y+50
+          this.height = 20
+          this.width = 20 
+          this.img = new Image ()
+          this.img.src = './images/spell.png'
+      }
+      draw(){
+          ctx.drawImage(this.img, this.x, this.y, this.height, this.width)
+      }
+  }
