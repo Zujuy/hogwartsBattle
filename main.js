@@ -3,8 +3,10 @@ const ctx = canvas.getContext('2d')
 let frames = 0
 let interval
 
+
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+
   }
 
   function playerAnimation(player) {
@@ -17,8 +19,6 @@ function clearCanvas() {
     }
   
   }
-
- 
 
   function gameOver() {
     if (player1.hp === 0 ) {
@@ -41,7 +41,6 @@ function clearCanvas() {
     player1.y += player1.vy
     player2.x += player2.vx
     player2.y += player2.vy
-    // flash.y += gravity
     // checkColitions()
     // generateIce()
     // drawObstacles()
@@ -50,4 +49,13 @@ function clearCanvas() {
 
 
 
-  interval = setInterval(update, 1000 / 60)
+   interval = setInterval(update, 1000 / 60)
+
+  //  const sound = new Audio();
+  //  const button = document.querySelector('button');
+  //  button.addEventListener('click', playSound);
+  //  function playSound(){
+  //     sound.src = 'audio/harry_music.mp3';
+  //     sound.play();
+  //  }
+

@@ -14,7 +14,7 @@ document.onkeydown =  e => {
         case 68:
             player1.moveLeft()
             return  
-        case 82:
+        case 69:
             player1.attackDer()
             return
         case 81:

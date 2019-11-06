@@ -23,8 +23,8 @@ class Board {
       constructor(){
           this.width = 100
           this.height =100
-          this.y = 550
-          this.x = 200
+          this.y = 350
+          this.x = 100
           this.vx = 0
           this.vy = 0
           this.animate = 1
@@ -81,14 +81,14 @@ class Board {
           this.position = 0
 
       }
-
-      attackDer(){
+      
+        attackDer(){
         this.y -= 0
         this.position = 5
 
     }
 
-    attackIzq(){
+       attackIzq(){
         this.y -= 0
         this.position = 4
 
@@ -103,8 +103,8 @@ class Player2 {
     constructor(){
         this.width = 100
         this.height =100
-        this.y = 550
-        this.x = 700
+        this.y = 350
+        this.x = 450
         this.vx = 0
         this.vy = 0
         this.animate = 1
@@ -171,8 +171,5 @@ class Player2 {
         this.position = 4
 
     }
-
-    
-    
    }
 

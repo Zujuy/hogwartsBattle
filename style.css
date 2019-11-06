@@ -1,7 +1,7 @@
 body,
 html {
-  width: 100vh;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -9,10 +9,36 @@ body {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  margin-left:300px;
+  margin: 0%;
 }
 
+
+.back{
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#image{
+    width: 15%;
+    margin-left: 55%;
+    padding: 0px;
+    margin-bottom: 0px;
+    
+}
 canvas {
   border: 2px solid white;
+  margin-left:20%;
+  margin-top: 0%;
+  padding: 0px;
   
 }
+/* p{
+    color: cornsilk;
+    padding: 0px;
+    margin-left: 20%;
+    margin-top: 0%;
+    font-family: fantasy;
+    margin-right: 0%;
+} */
