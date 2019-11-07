@@ -14,7 +14,7 @@ body {
 
 
 .back{
-    background-color: black;
+    background-image: url(./images/BACK.jpg);
     justify-content: center;
     align-items: center;
     width: 100%;

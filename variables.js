@@ -7,6 +7,8 @@ const spellsRight=[]
 const spellsLeft=[]
 const finish = new Gameover()
 const lifes = new LifePotions1()
+const lifes1 = new LifePotions2()
+
  
 
 

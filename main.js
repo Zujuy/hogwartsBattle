@@ -94,6 +94,7 @@ function clearCanvas() {
     drawSpells()
     drawSpells1()
     lifes.draw()
+    lifes1.draw()
     checkColitions()
     // generateIce()
     

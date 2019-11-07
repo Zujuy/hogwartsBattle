@@ -238,7 +238,7 @@ class Gameover {
         this.height = 160
         this.img = new Image()
         this.img.src =
-          './images/game over copy.png'
+          './images/Game_over.png'
         this.img.onload = () => {
           this.draw()
         }
@@ -273,6 +273,34 @@ class Gameover {
             this.image.src = "./images/vidas 4 p1.png";
           }else if (player1.hp === 5){
             this.image.src = "./images/vidas 5 p1.png";
+          }
+             ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+        }
+      }
+
+      //  player 2 //
+
+
+      class LifePotions2 {
+        constructor() {
+          this.x = 440;
+          this.y = 50;
+          this.width = 150;
+          this.height = 38;
+          this.image = new Image();
+          this.image.src = "";
+        }
+        draw() {
+          if (player2.hp === 1) {
+            this.image.src = "./images/vidas1 p2.png";
+          }else if (player2.hp === 2){
+            this.image.src = "./images/vidas2 p2.png"; 
+          }else if (player2.hp === 3){
+            this.image.src = "./images/vidas3 p2.png";
+          }else if (player2.hp === 4){
+            this.image.src = "./images/vidas 4 p2.png";
+          }else if (player2.hp === 5){
+            this.image.src = "./images/vidas5 p2.png";
           }
              ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         }
