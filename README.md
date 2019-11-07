@@ -1,5 +1,5 @@
 # Hogwarts Battle | css, javascript, html and canvas
-## web development - Ironhack | Proyect of module 1
+## web development - Ironhack | Project of module 1
 ### Created by: Itza Zujuy B.D.
 
 
