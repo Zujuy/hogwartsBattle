@@ -62,13 +62,13 @@ class Board {
               )
       }
 
-      isTouching(obstacle) {
-        // algo está tratando de ocupar el mismo espacio en canvas que el personaje
+      isTouching(spell) {
+        // algo está tratando de ocupar el mismo espacio en canvas que el personaje1
         return (
-          this.x < obstacle.x + obstacle.width &&
-          this.x + this.width > obstacle.x &&
-          this.y < obstacle.y + obstacle.height &&
-          this.y + this.height > obstacle.y
+          this.x-10 < spell.x + spell.width &&
+          this.x-10 + this.width > spell.x &&
+          this.y < spell.y + spell.height &&
+          this.y + this.height > spell.y
         )
       }
 
@@ -150,13 +150,13 @@ class Player2 {
             )
     }
 
-    isTouching(obstacle) {
-        // algo está tratando de ocupar el mismo espacio en canvas que el personaje
+    isTouching(spell) {
+        // algo está tratando de ocupar el mismo espacio en canvas que el personaje2
         return (
-          this.x < obstacle.x + obstacle.width &&
-          this.x + this.width > obstacle.x &&
-          this.y < obstacle.y + obstacle.height &&
-          this.y + this.height > obstacle.y
+          this.x < spell.x + spell.width &&
+          this.x + this.width > spell.x &&
+          this.y < spell.y + spell.height &&
+          this.y + this.height > spell.y
         )
       }
 
@@ -227,3 +227,23 @@ class Player2 {
         ctx.drawImage(this.img, this.x, this.y, this.height, this.width)
     }
 }
+
+// ==== imagen game over ==== //
+
+// class Gameover {
+//     constructor() {
+//         this.x = 
+//         this.y = 0
+//         this.width = canvas.width
+//         this.height = canvas.height
+//         this.img = new Image()
+//         this.img.src =
+//           './images/back-pelea-principal.jpeg'
+//         this.img.onload = () => {
+//           this.draw()
+//         }
+//       }
+//       draw() {
+//         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+//       }
+//     } 

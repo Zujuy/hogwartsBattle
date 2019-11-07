@@ -38,12 +38,46 @@ function clearCanvas() {
     });
   }
 
+  // ====checar coliciones de cada jugador para quitar vidas====///
+
+  function checkColitions() {
+    //colitions player1//
+    spellsRight.forEach((spell, i) => {
+      if (player1.isTouching(spell)) {
+        spellsRight.splice(i, 1)
+        player1.hp--
+      }
+    })
+    spellsLeft.forEach((spell, i) => {
+      if (player1.isTouching(spell)) {
+        spellsLeft.splice(i, 1)
+        player1.hp--
+      }
+    })
+
+    //colitions player2//
+
+    spellsRight.forEach((spell, i) => {
+      if (player2.isTouching(spell)) {
+        spellsRight.splice(i, 1)
+        player2.hp--
+      }
+    })
+
+    spellsLeft.forEach((spell, i) => {
+      if (player2.isTouching(spell)) {
+        spellsLeft.splice(i, 1)
+        player2.hp--
+      }
+    })
+  }
+
   function gameOver() {
-    if (player1.hp === 0 ) {
+    if (player1.hp === 0 || player2.hp === 0) {
       clearInterval(interval)
-      ctx.font = '30px Arial'
-      ctx.fillStyle = 'white'
-      ctx.fillText('Game Over', canvas.width / 2 - 30, canvas.height / 2 - 10)
+      ctx.font = '50px San Serif'
+      ctx.fillStyle = '#A4A4A4'
+      ctx.fillText('Game Over', canvas.width / 2 - 50, canvas.height / 2 - 10)
     }
   }
 
@@ -64,7 +98,7 @@ function clearCanvas() {
     // spell1.draw()
     // spell2.draw()
     // generateSpells()
-    // checkColitions()
+    checkColitions()
     // generateIce()
     // drawObstacles()
     gameOver()
