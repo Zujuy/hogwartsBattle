@@ -30,6 +30,14 @@ function clearCanvas() {
     });
   }
 
+  function drawSpells1() {
+    spellsLeft.forEach((spell1,i) => {
+      spell1.x --;
+      if(spell1.x >= canvas.width) return spellsLeft.splice(i,1)
+      spell1.draw()
+    });
+  }
+
   function gameOver() {
     if (player1.hp === 0 ) {
       clearInterval(interval)
@@ -52,6 +60,7 @@ function clearCanvas() {
     player2.x += player2.vx
     player2.y += player2.vy
     drawSpells()
+    drawSpells1()
     // spell1.draw()
     // spell2.draw()
     // generateSpells()
@@ -61,7 +70,7 @@ function clearCanvas() {
     gameOver()
   }
 
-  interval = setInterval(update, 1000 / 60)
+  interval = setInterval(update, 1000 / 30)
 
 
   // ===generate spells====/

@@ -196,16 +196,34 @@ class Player2 {
 
 // ====== spells============//
 
+// ======spell derecho======//
+
   class Spell {
       constructor(x,y) {
           this.x = x+100
           this.y = y+50
           this.height = 20
           this.width = 20 
-          this.img = new Image ()
+          this.img = new Image ()          
           this.img.src = './images/spell.png'
       }
       draw(){
           ctx.drawImage(this.img, this.x, this.y, this.height, this.width)
       }
   }
+
+  // ======spell izquierdo======//
+
+  class Spell1 {
+    constructor(x,y) {
+        this.x = x-50
+        this.y = y+30
+        this.height = 20
+        this.width = 20 
+        this.img = new Image ()          
+        this.img.src = './images/spell left.png'
+    }
+    draw(){
+        ctx.drawImage(this.img, this.x, this.y, this.height, this.width)
+    }
+}

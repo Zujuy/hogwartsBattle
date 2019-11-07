@@ -20,7 +20,7 @@ document.onkeydown =  e => {
             return
         case 81:
             player1.attackIzq()
-            spell1.spellLeft()
+            spellsLeft.push(new Spell1(player1.x, player1.y))
             return
        
 
@@ -45,7 +45,7 @@ document.onkeydown =  e => {
             return
         case 78:
             player2.attackIzq()
-            spell2.spellRight()
+            spellsLeft.push(new Spell1(player2.x, player2.y))
             return
     
         
