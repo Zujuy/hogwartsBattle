@@ -22,23 +22,15 @@ body {
 }
 #image{
     width: 15%;
-    margin-left: 55%;
+    margin-left: 40%;
     padding: 0px;
     margin-bottom: 0px;
     
 }
 canvas {
   border: 2px solid white;
-  margin-left:20%;
+  margin-left:23.5%;
   margin-top: 0%;
   padding: 0px;
   
 }
-/* p{
-    color: cornsilk;
-    padding: 0px;
-    margin-left: 20%;
-    margin-top: 0%;
-    font-family: fantasy;
-    margin-right: 0%;
-} */

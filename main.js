@@ -11,6 +11,12 @@ function clearCanvas() {
 
   }
 
+// function startGame() {
+//   startedGame = true;
+//   interval = setInterval(update, 1000 / 100);
+//   audio.play();
+//   }
+
   function playerAnimation(player) {
     if (frames % 6 === 0) {
       if (player.animate === 5) {
