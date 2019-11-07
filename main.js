@@ -30,7 +30,7 @@ function clearCanvas() {
   
   function drawSpells() {
     spellsRight.forEach((spell,i) => {
-      spell.x ++;
+      spell.x += 15;
       if(spell.x >= canvas.width) return spellsRight.splice(i,1)
       spell.draw()
     });
@@ -38,7 +38,7 @@ function clearCanvas() {
 
   function drawSpells1() {
     spellsLeft.forEach((spell1,i) => {
-      spell1.x --;
+      spell1.x -=15;
       if(spell1.x >= canvas.width) return spellsLeft.splice(i,1)
       spell1.draw()
     });
@@ -82,6 +82,7 @@ function clearCanvas() {
     if (player1.hp === 0 || player2.hp === 0) {
       clearInterval(interval)
       return finish.draw()
+      
     }
   }
 
@@ -106,6 +107,9 @@ function clearCanvas() {
     
     gameOver()
   }
+
+  
+
 
   interval = setInterval(update, 1000 / 30)
 

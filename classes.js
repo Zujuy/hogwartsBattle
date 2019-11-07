@@ -224,7 +224,7 @@ class Player2 {
         this.img.src = './images/spell left.png'
     }
     draw(){
-        ctx.drawImage(this.img, this.x, this.y, this.height, this.width)
+        ctx.drawImage(this.img, this.x, this.y, this.height, this.width,)
     }
 }
 
@@ -305,3 +305,4 @@ class Gameover {
              ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         }
       }
+

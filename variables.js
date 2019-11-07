@@ -8,6 +8,9 @@ const spellsLeft=[]
 const finish = new Gameover()
 const lifes = new LifePotions1()
 const lifes1 = new LifePotions2()
+// const audio = document.getElementById("myAudio");
+// audio.autoplay = true;
+// audio.load();
 
  
 
