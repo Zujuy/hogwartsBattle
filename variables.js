@@ -5,7 +5,8 @@ const spell1 = new Spell(player1.x,player1.y)
 const spell2 = new Spell(player2.x,player2.y)
 const spellsRight=[]
 const spellsLeft=[]
-// const gameOver = new Gameover()
+const finish = new Gameover()
+const lifes = new LifePotions1()
  
 
 

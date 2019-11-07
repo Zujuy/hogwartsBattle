@@ -75,9 +75,7 @@ function clearCanvas() {
   function gameOver() {
     if (player1.hp === 0 || player2.hp === 0) {
       clearInterval(interval)
-      ctx.font = '50px San Serif'
-      ctx.fillStyle = '#A4A4A4'
-      ctx.fillText('Game Over', canvas.width / 2 - 50, canvas.height / 2 - 10)
+      return finish.draw()
     }
   }
 
@@ -95,17 +93,13 @@ function clearCanvas() {
     player2.y += player2.vy
     drawSpells()
     drawSpells1()
-    // spell1.draw()
-    // spell2.draw()
-    // generateSpells()
+    lifes.draw()
     checkColitions()
     // generateIce()
-    // drawObstacles()
+    
     gameOver()
   }
 
   interval = setInterval(update, 1000 / 30)
 
-
-  // ===generate spells====/
 

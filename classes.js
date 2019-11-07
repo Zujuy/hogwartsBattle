@@ -230,20 +230,50 @@ class Player2 {
 
 // ==== imagen game over ==== //
 
-// class Gameover {
-//     constructor() {
-//         this.x = 
-//         this.y = 0
-//         this.width = canvas.width
-//         this.height = canvas.height
-//         this.img = new Image()
-//         this.img.src =
-//           './images/back-pelea-principal.jpeg'
-//         this.img.onload = () => {
-//           this.draw()
-//         }
-//       }
-//       draw() {
-//         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-//       }
-//     } 
+class Gameover {
+    constructor() {
+        this.x = 150
+        this.y = 100
+        this.width = 300
+        this.height = 160
+        this.img = new Image()
+        this.img.src =
+          './images/game over copy.png'
+        this.img.onload = () => {
+          this.draw()
+        }
+      }
+      draw() {
+        ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+      }
+    } 
+
+
+    //=======vidas =====//
+
+    // player 1// 
+
+    class LifePotions1 {
+        constructor() {
+          this.x = 10;
+          this.y = 50;
+          this.width = 150;
+          this.height = 38;
+          this.image = new Image();
+          this.image.src = "";
+        }
+        draw() {
+          if (player1.hp === 1) {
+            this.image.src = "./images/vidas1 p1.png";
+          }else if (player1.hp === 2){
+            this.image.src = "./images/vidas 2p1.png"; 
+          }else if (player1.hp === 3){
+            this.image.src = "./images/vidas 3 p1.png";
+          }else if (player1.hp === 4){
+            this.image.src = "./images/vidas 4 p1.png";
+          }else if (player1.hp === 5){
+            this.image.src = "./images/vidas 5 p1.png";
+          }
+             ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+        }
+      }
