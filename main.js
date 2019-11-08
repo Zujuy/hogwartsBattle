@@ -33,6 +33,7 @@ function clearCanvas() {
       spell.x += 15;
       if(spell.x >= canvas.width) return spellsRight.splice(i,1)
       spell.draw()
+      audio1.play()
     });
   }
 
@@ -41,6 +42,7 @@ function clearCanvas() {
       spell1.x -=15;
       if(spell1.x >= canvas.width) return spellsLeft.splice(i,1)
       spell1.draw()
+      audio1.play()
     });
   }
 

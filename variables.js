@@ -9,7 +9,7 @@ const finish = new Gameover()
 const lifes = new LifePotions1()
 const lifes1 = new LifePotions2()
 let audio = new Audio ("./audio/harry_music.mp3")
-
+let audio1 = new Audio ("./audio/Hechizo - Cubrise - Impertecmi.mp3")
 
  
 
