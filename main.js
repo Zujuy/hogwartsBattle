@@ -11,12 +11,6 @@ function clearCanvas() {
 
   }
 
-// function startGame() {
-//   startedGame = true;
-//   interval = setInterval(update, 1000 / 100);
-//   audio.play();
-//   }
-
   function playerAnimation(player) {
     if (frames % 6 === 0) {
       if (player.animate === 5) {
@@ -82,8 +76,12 @@ function clearCanvas() {
 
   function gameOver() {
     if (player1.hp === 0 || player2.hp === 0) {
+      let restartButton = document.querySelector('#restartButton')
+      restartButton.style.display = 'inline'
+      audio.pause()
       clearInterval(interval)
       return finish.draw()
+      
       
     }
   }
@@ -110,6 +108,23 @@ function clearCanvas() {
     gameOver()
   }
 
+
+
+  //pantala inicio//
+
+  function inicio() {
+    let img2 = document.getElementById("inicio");
+    let boton1 = document.getElementById("begin")
+    img2.style.display && boton1.style.display == "inline";
+      if(img2.style.display && boton1.style.display == "inline" ) {
+        img2.style.display = "none";
+        boton1.style.display = "none";
+        
+      }
+      else {
+      img2.style.display && boton1.style.display == "inline";
+      }
+    }
   // hide  instructions//
 
   function showOne() {
@@ -127,6 +142,10 @@ function clearCanvas() {
     }
 
 
+    // re-start button// 
+
+    document.getElementById("restartButton").onclick = function(){
+      location.reload()
+    }
+
   interval = setInterval(update, 1000 / 30)
-
-

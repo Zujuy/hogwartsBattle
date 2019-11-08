@@ -30,13 +30,13 @@ canvas {
   margin-left:23.5%;
   margin-top: 0%;
   padding: 0px;
-  z-index: 1;
+  z-index: 0;
   position: relative;
   
 }
 
-#instrucciones{
-    z-index: 2;
+#inicio{
+    z-index: 1;
     margin-left:0%;
     margin-top: 0%;
     padding: 0px;
@@ -44,8 +44,44 @@ canvas {
     
 }
 
-#start{
+#begin{
+    z-index: 2;
+    background-color: antiquewhite;
+    color: darkgoldenrod;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 50%;
+    width: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-family: fantasy;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(185, 158, 4, 0.783), 0 6px 20px 0 rgba(192, 176, 4, 0.66);
+}
+
+#begin:hover {
+    background-color: #e7e7e7;
+    border: 3px solid darkgoldenrod;
+}
+
+
+#instrucciones{
     z-index: 3;
+    margin-left:0%;
+    margin-top: 0%;
+    padding: 0px;
+    position: absolute;
+    
+}
+
+
+
+#start{
+    z-index: 4;
     background-color: antiquewhite;
     color: darkgoldenrod;
     margin: 0px;
@@ -66,4 +102,30 @@ canvas {
 #start:hover {
     background-color: #e7e7e7;
     border: 3px solid darkgoldenrod;
+}
+
+#restartButton{
+    z-index: 5;
+    background-color: antiquewhite;
+    color: darkgoldenrod;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 100px;
+    width: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-family: fantasy;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(185, 158, 4, 0.783), 0 6px 20px 0 rgba(192, 176, 4, 0.66);
+
+}
+
+#restartButton:hover{
+    background-color: #e7e7e7;
+    border: 3px solid darkgoldenrod;
+
 }
