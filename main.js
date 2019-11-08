@@ -103,11 +103,8 @@ function clearCanvas() {
     lifes.draw()
     lifes1.draw()
     checkColitions()
-    // generateIce()
-    
     gameOver()
   }
-
 
 
   //pantala inicio//
