@@ -108,7 +108,20 @@ function clearCanvas() {
     gameOver()
   }
 
-  
+  // hide  instructions//
+
+  function showOne() {
+    let img1 = document.getElementById("instrucciones");
+    let boton = document.getElementById("start")
+    img1.style.display && boton.style.display == "inline";
+      if(img1.style.display && boton.style.display == "inline" ) {
+        img1.style.display = "none";
+        boton.style.display = "none";
+      }
+      else {
+      img1.style.display && boton.style.display == "inline";
+      }
+    }
 
 
   interval = setInterval(update, 1000 / 30)
