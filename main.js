@@ -113,32 +113,8 @@ function clearCanvas() {
   //pantala inicio//
 
   function inicio() {
-    let img2 = document.getElementById("inicio");
-    let boton1 = document.getElementById("begin")
-    img2.style.display && boton1.style.display == "inline";
-      if(img2.style.display && boton1.style.display == "inline" ) {
-        img2.style.display = "none";
-        boton1.style.display = "none";
-        
-      }
-      else {
-      img2.style.display && boton1.style.display == "inline";
-      }
-    }
-  // hide  instructions//
-
-  function showOne() {
-    let img1 = document.getElementById("instrucciones");
-    let boton = document.getElementById("start")
-    img1.style.display && boton.style.display == "inline";
-      if(img1.style.display && boton.style.display == "inline" ) {
-        img1.style.display = "none";
-        boton.style.display = "none";
-        audio.play()
-      }
-      else {
-      img1.style.display && boton.style.display == "inline";
-      }
+    document.querySelector('#initScreen').style.display = 'block'    
+    document.querySelector('#instrScreen').style.display = 'none'
     }
 
 
@@ -149,3 +125,18 @@ function clearCanvas() {
     }
 
   interval = setInterval(update, 1000 / 30)
+
+  inicio()
+
+  document.querySelector('#begin').onclick = () => {
+    document.querySelector('#initScreen').style.display = 'none'    
+    document.querySelector('#instrScreen').style.display = 'block'
+    document.querySelector('canvas').style.display = 'none'
+  }
+
+  document.querySelector('#start').onclick = () => {
+    document.querySelector('#instrucciones').style.display = 'none'
+    document.querySelector('#start').style.display = 'none'
+    document.querySelector('canvas').style.display = 'inline'
+    audio.play()
+  }
