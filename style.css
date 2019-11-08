@@ -71,6 +71,8 @@ canvas {
 
 #instrucciones{
     z-index: 3;
+    width: 100%;
+    height: 100%;
     margin-left:0%;
     margin-top: 0%;
     padding: 0px;
