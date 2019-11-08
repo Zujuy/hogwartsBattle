@@ -117,6 +117,7 @@ function clearCanvas() {
       if(img1.style.display && boton.style.display == "inline" ) {
         img1.style.display = "none";
         boton.style.display = "none";
+        audio.play()
       }
       else {
       img1.style.display && boton.style.display == "inline";
